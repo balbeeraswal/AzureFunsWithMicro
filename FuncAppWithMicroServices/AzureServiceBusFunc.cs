@@ -17,7 +17,7 @@ public class AzureServiceBusFunc
 
     [Function(nameof(AzureServiceBusFunc))]
     public async Task Run(
-        [ServiceBusTrigger("myqueue", Connection = "AzureServiceBusConnection")]
+        [ServiceBusTrigger("myqueue", Connection = "ServiceBusConnectionString")]
         ServiceBusReceivedMessage message,
         ServiceBusMessageActions messageActions)
     {
